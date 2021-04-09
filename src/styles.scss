@@ -1,0 +1,171 @@
+/* You can add global styles to this file, and also import other style files */
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: "Helvetica Neue", sans-serif; }
+
+// Navbar
+.navbar{ background-color: #fff;height: 60px; }
+// nav .navbar-brand img{ width: 80px; }
+.navbar-nav .nav-link{ color: #688DAB;font-size: 14px;font-weight: 600; font-family: 'Monstserrat', sans-serif; }
+.navbar-nav .nav-link { position:relative;z-index: 1; }
+.navbar-nav .nav-link:hover { color: #688DA8;transition: ease-in-out 0.8s; }
+.navbar-nav .nav-link:after { 
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    margin-top: 3px;
+    background: #688DA8;
+    transition: width .5s;
+    opacity: 0; 
+}
+.navbar-nav .nav-link:hover:after { 
+    opacity: 1;
+    width: 100%; 
+}
+#carouselExampleFade .carousel-inner { height: 500px; }
+#carouselExampleFade .carousel-inner .carousel-item img { width: 100%;height: 500px; }
+
+
+.Margin30{ margin: 30px 0px; }
+// Button
+.Homepage_Btn{ color: #fff;background-color: #688DAB;padding: 8px;font-size: 14px;font-weight: 600;border: 1px solid #688DAB;cursor: pointer;border-radius: 5px;transition: ease-in-out 0.7s;
+    &:hover {
+        color: #688DAB;background-color: transparent;border: 1px solid #688DAB;
+    } 
+}
+
+// Homepage
+.About_Heading{ color: #688DAB;font-size: 42px;font-weight: 600;text-align: center;margin: 20px 0; }
+.About_Content{ color: #000;font-size: 16px;font-weight: 500;line-height: 28px;word-spacing: 1px;text-align: justify; }
+.Aboutus_Img{ width: 100%; }
+.Why_we_Choose { background-color: #688DAB; padding: 30px; }
+.Why_we_Choose .Img_Content { padding: 10px 50px; }
+.Why_we_Choose .Img_Content img { width: 90px;height: 90px; }
+.Why_we_Choose .Content { margin-left: 15px; }
+.Why_we_Choose .Heading { color: #fff;font-size: 24px;font-weight: 500;text-align: left; }
+.Why_we_Choose .Sub_Content { color: #fff;font-size: 14px;text-align: left; }
+.ProductSection{ background: url(assets/Images/products-background.jpg) center center/cover no-repeat;padding: 80px 10px;background-attachment: fixed; }
+.ProductList .Product_Img img { border-top-left-radius: 10px;border-top-right-radius: 10px;width: 100%;height: 250px; }
+.ProductList .Product_Desc .View_More{ color: #fff;text-decoration: none;font-weight: 500;font-size: 14px; }
+.ProductList .Product_Desc .View_More_Background { border-radius: 50%;background-color: #688DAB;width: 65px;height: 65px;text-align: center;justify-content: center;padding: 20px 0px; cursor: pointer;margin: -30px auto 0 auto;position: relative;z-index: 1;}
+.ProductList .Product_Desc{ 
+    background-color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    .View_Desc{
+        font-size: 14px;
+        color: #000;
+        font-weight: 400;
+        text-align: justify;
+        padding: 10px 15px;
+    }
+ }
+
+
+// Footer Section
+.Footer_Section{
+    background-color: #688DAB;
+    .Footer_Logo{
+        margin: 30px 0;
+        img{
+            border-radius: 10%;
+        }
+    }
+    .Viewmap{
+        color: #fff;
+        i{
+            width: 10px;
+        }
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    .Footer_Links_List{
+        // display: inline-flex;
+        // justify-content: center;
+        margin: 25px auto;
+        list-style-type: none;
+        padding-left: 0px;
+        .Footer_Links_Item a{
+            color: #fff;
+            // margin-left: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: ease-in-out 0.5s;
+            letter-spacing: 1px;
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+            &:hover{
+                color: #fff;
+            }
+        }
+    }
+    .Contact_mail{
+        color: #fff;
+        font-size: 16px;
+        strong{
+            padding-right: 10px;
+            i{
+                width: 20px;
+            }
+        }
+    }
+    .Copy_Right{
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+        margin: 25px autoss;
+    }
+    .Branch_Heading{
+        color: #fff;
+        font-weight: 500;
+    }
+    .Brach_Address{
+        color: #fff;
+        font-size: 14px;
+    }
+    // .Address_Section{
+    //     padding-left: 135px;
+    // }
+    .Toreach{
+        margin: 25px 0px;
+    }
+    .Footer_slogan{
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-bottom: 0px;
+        text-align: center;
+    }
+}
+.Footer_Section .Footer_Links_List .Footer_Links_Item a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    margin-top: 3px;
+    background: #fff;
+    transition: width .8s;
+    opacity: 0;         
+}
+.Footer_Section .Footer_Links_List .Footer_Links_Item a:hover::after{
+    width: 100%;
+    opacity: 1;
+}
+
+
+// media query
+@media screen and (max-width: 770px) {
+    .Footer_Section .Footer_Links_List{
+      display: block;
+    }
+    .Why_we_Choose .Img_Content{
+        padding: 0px;
+    }
+  }
